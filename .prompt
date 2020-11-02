@@ -1,0 +1,14 @@
+### zsh prompt customization, adapted from https://scriptingosx.com/2019/07/moving-to-zsh-06-customizing-the-zsh-prompt/
+# show a green checkmark for return code 0 of previous command or the return code itself in red otherwise
+PROMPT_RETURN_CODE='%(?.%F{green}√.%F{red}?%?)%f'
+# show # with root privileges, % otherwise
+PROMPT_PRIVILEGE='%#'
+# show the last path element of the current working dir, shortening home to ~
+PROMPT_WORKING_DIR='%B%F{240}%10~%f%b'
+
+# left/normal prompt
+PROMPT='%m:${PROMPT_WORKING_DIR} ${PROMPT_PRIVILEGE} '
+# right prompt
+RPROMPT='${PROMPT_RETURN_CODE}'
+
+setopt prompt_subst
