@@ -9,7 +9,8 @@ setopt CORRECT_ALL
 setopt AUTO_CD
 
 ## shell history
-HISTSIZE=100000
+HISTSIZE=10000
+SAVEHIST=10000
 HISTFILE=${ZDOTDIR:-$HOME}/.zsh_history
 # more command infos
 setopt EXTENDED_HISTORY
