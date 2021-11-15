@@ -6,4 +6,7 @@ source ${ZDOTDIR}/.completions
 source ${ZDOTDIR}/.prompt
 source ${ZDOTDIR}/.bindkeys
 
+autoload -U select-word-style
+select-word-style bash
+
 eval "$(/opt/homebrew/bin/brew shellenv)"
